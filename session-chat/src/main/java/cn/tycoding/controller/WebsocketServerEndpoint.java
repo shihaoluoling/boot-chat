@@ -8,6 +8,8 @@ import cn.tycoding.utils.CoreUtil;
 import cn.tycoding.utils.R;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -32,6 +34,8 @@ public class WebsocketServerEndpoint {
     private HttpSession httpSession;
 
     private static ChatSessionService chatSessionService;
+
+    protected final Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     public void setChatSessionService(ChatSessionService chatSessionService) {

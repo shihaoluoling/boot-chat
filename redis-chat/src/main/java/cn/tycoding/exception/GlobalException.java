@@ -18,4 +18,12 @@ public class GlobalException extends RuntimeException {
     public GlobalException(String message) {
         this.msg = message;
     }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
 }

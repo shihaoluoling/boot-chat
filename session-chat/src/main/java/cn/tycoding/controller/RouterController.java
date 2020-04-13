@@ -3,6 +3,8 @@ package cn.tycoding.controller;
 import cn.tycoding.entity.User;
 import cn.tycoding.utils.R;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +20,7 @@ import java.util.Enumeration;
 @Slf4j
 @Controller
 public class RouterController {
+    protected final Logger log = LoggerFactory.getLogger(this.getClass());
 
     /**
      * 登陆页面

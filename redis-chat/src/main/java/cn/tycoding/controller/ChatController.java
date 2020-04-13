@@ -5,6 +5,8 @@ import cn.tycoding.exception.GlobalException;
 import cn.tycoding.service.ChatSessionService;
 import cn.tycoding.utils.R;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +23,7 @@ public class ChatController {
 
     @Autowired
     private ChatSessionService chatSessionService;
-
+    protected final Logger log = LoggerFactory.getLogger(this.getClass());
     /**
      * 获取当前窗口用户信息
      *
